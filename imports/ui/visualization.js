@@ -203,6 +203,7 @@ export default function Network() {
       content += "<hr class=\"tooltip-hr\">";
       content += "<p class=\"info\">ID: " + d.id + "</p>";
       content += "<p class=\"info\">Preference: " + d.preference + "</p>";
+      content += "<p class=\"info\">Adversary: " + d.isAdversary + "</p>";
       content += "<p class=\"info\">Communication: " + d.communication + "</p>";
       content += "<p class=\"info\">Message: " + d.message + "</p>";
       tooltip.showTooltip(content,d3.event);

@@ -5,7 +5,7 @@ Router.configure({
     loadingTemplate: 'loadingWheel',
     waitOn: function() {
         Meteor.subscribe('dates');
-        return Meteor.subscribe('sessions', '20160404');
+        return Meteor.subscribe('sessions', '20160705');
     }
 });
 

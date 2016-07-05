@@ -1,0 +1,41 @@
+<template name="loadedData">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    {{>tabs}}
+                </div>
+                <div class="panel-body">
+                    {{> controls}}
+                    <div class="row">
+                        <div class="col-md-12">
+                            {{#if loading}}
+                                <div id="loading" >
+                                    {{>loadingWheel}}
+                                </div>
+                            {{/if}}
+                            <div id="main" role="main">
+                                <div id="vis"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        {{> toggles}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            {{> legend}}
+        </div>
+    </div>
+</template>
+
+<template name="toggles">
+  <div id="names" class="checkbox">
+    <label>
+      <input type="checkbox" value="">Show Names</label>
+  </div>
+</template>

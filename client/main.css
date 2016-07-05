@@ -1,0 +1,97 @@
+/* CSS declarations go here */
+#container {
+  margin: auto;
+}
+
+#main {
+  clear: both;
+}
+
+#back {
+  float: right;
+}
+
+#names {
+  float: right;
+  padding-right: 20px;
+}
+
+.panel-heading {
+  padding-bottom: 0px;
+}
+
+#time-display {
+  text-align: center;
+}
+
+#game-label {
+  float: right;
+}
+
+#simulation-label {
+  float: right;
+}
+
+#game-input {
+  text-align: center
+}
+
+h1 {
+  text-align: center;
+}
+
+.legend-item {
+  display: inline;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#legend {
+  text-align: center;
+}
+
+
+
+.tooltip {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  -moz-border-radius:3px;
+  border-radius: 3px;
+  border: 2px solid #000;
+  background: #fff;
+  opacity: 1;
+  color: #000;
+  padding: 10px;
+  width: 300px;
+  font-size: 15px;
+  z-index: 120;
+}
+
+.tooltip p.main {
+  font-size: 15px;
+  text-align: center;
+  padding:0;
+  margin:0;
+}
+
+.tooltip p.info {
+  font-size: 15px;
+  text-align: left;
+  padding: 0;
+  /*margin: 0;*/
+}
+
+hr.tooltip-hr {
+  padding:3px 0 0 0;
+  margin:3px 0 3px 0;
+}
+
+.tooltip .title {
+  font-size: 20px;
+  line-height: 24px;
+}
+ 
+.tooltip .name {
+  font-weight:bold;
+}

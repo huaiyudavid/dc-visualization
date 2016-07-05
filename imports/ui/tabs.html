@@ -1,0 +1,12 @@
+<template name="tabs">
+  <ul id="tabs" class="nav nav-tabs" role="tablist">
+    {{#each tabList}} {{> tab}} {{/each}}
+    <!--<li role="presentation" class="active"><a href="#">Session 1</a></li>-->
+    <!--<li role="presentation"><a href="#">Session 2</a></li>-->
+    <!--<li role="presentation"><a href="#">Session 3</a></li>-->
+  </ul>
+</template>
+
+<template name="tab">
+  <li role="presentation" class="{{#if active}}active{{/if}}"><a class="panel-title" id="{{id}}" href="#">{{text}}</a></li>
+</template>

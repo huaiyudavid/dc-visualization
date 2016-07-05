@@ -1,0 +1,47 @@
+<template name="controls">
+  <div class="row">
+    <div class="col-md-4">
+      <h4 id="game-label">Game Number: </h4>
+    </div>
+    <div class="col-md-2">
+      <form id="game-form">
+        <div class="form-group">
+        <input id="game-input" type="text" value="1" placeholder="max {{gameMax}}" class="form-control">
+      </div>
+      </form>
+    </div>
+    <div class="col-md-2">
+      <h4 id="simulation-label">Simulation: </h4>
+    </div>
+    <div class="col-md-4">
+      {{#unless playing}}
+        <button id="play" type="button" class="btn btn-sm btn-default">
+          <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+        </button>
+      {{else}}
+        <button id="pause" type="button" class="btn btn-sm btn-default">
+          <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+        </button>
+      {{/unless}}
+      <button id="stop" type="button" class="btn btn-sm btn-default">
+        <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <button id="back" type="button" class="btn btn-sm btn-default">Back</button>
+    </div>
+    <div class="col-md-4">
+      <div class="row">
+        <input id="slider" type="range" value="1" min="1" max="{{total}}" step="1">
+      </div>
+      <div class="row">
+        <h4 id="time-display">Time: {{time}}</h4>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <button id="next" type="button" class="btn btn-sm btn-default">Next</button>
+    </div>
+  </div>
+</template>

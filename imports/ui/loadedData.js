@@ -23,11 +23,11 @@ Template.loadedData.rendered = function() {
   
   var sessions = Sessions.find({
     id: 0,
-    date: 20160705
+    date: 20160707
   });
   var session = sessions.fetch()[0];
   Session.set('session', session);
-  Session.set('activedate', 20160705);
+  Session.set('activedate', 20160707);
   Session.set('sliderVal', 1);
   Session.set('loading', false);
   Session.set('playing', false);

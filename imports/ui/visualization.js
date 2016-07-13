@@ -107,16 +107,31 @@ export default function Network() {
         
     text = textG.selectAll("text")
           .data(curNodesData, function(d) { return d.id })
-          .text(function(d) { return showNames ? d.name : d.id; });
+          .text(function(d) { return showNames ? d.name : d.id; })
+          .attr("fill", function(d) { if (d.isAdversary === "true") { return "blue"; } else { return "white"; }})
+          .attr("font-weight", function(d) {
+            if (d.isAdversary === "true") {
+              return "900";
+            } else {
+              return "normal";
+            }
+          });
           
     text.enter().append("text")
         .attr("x", function(d) { return d.x; })
         .attr("y", function(d) { return d.y; })
         .attr("font-family", "sans-serif")
         .attr("font-size", "10px")
-        .attr("fill", "white")
+        .attr("fill", function(d) { if (d.isAdversary === "true") { return "blue"; } else { return "white"; }})
         .attr("text-anchor", "middle")
-        .text(function(d) { return showNames ? d.name : d.id; });
+        .text(function(d) { return showNames ? d.name : d.id; })
+        .attr("font-weight", function(d) {
+          if (d.isAdversary === "true") {
+            return "900";
+          } else {
+            return "normal";
+          }
+        });
         
     node.on("mouseover", showDetails)
         .on("mouseout", hideDetails);

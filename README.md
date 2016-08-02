@@ -10,7 +10,7 @@ Then clone this repo to your local machine.
 1. Place the log file and the network configuration file in the same folder as parselog.py and other python files.
 2. Go into parselog.py and change the input file names in main() to match your files. Also change the date to match the experiment date in the format YYYYMMDD.
 3. Run parselog.py (`python parselog.py`)
-4. parselog.py will output a JSON file in the form of `experimentYYYMMDD.json`
+4. parselog.py will output a JSON file in the form of `experimentYYYYMMDD.json`
 5. Go into `/dc-visualization/imports/router.js` and `/dc-visualization/imports/ui/loadedData.js` and change all instances of `20160707` to one of the dates of your experiments.
 6. While in the main directory (/dc-visualization), run `meteor`. This will start up the MongoDB database.
 7. Open a separate window, navigate to the same directory, and use this command: `mongoimport -h localhost:3001 --db meteor --collection sessions --type json --file experiment.json &> output.txt`
